@@ -1,24 +1,23 @@
-
 #include "Pilha.h"
 #include <iostream>
 #include <string>
 
-int main() {
-    // Cria uma pilha de strings
-    Pilha<std::string> nomes;
+using namespace std;
 
-    // Testa o push
+int main() {
+    Pilha<string> nomes;
+
     nomes.push("Beltrano");
     nomes.push("Cicrano");
     nomes.push("Fulano");
 
-    std::cout << "--------------------" << std::endl;
+    cout << "--------------------" << endl;
 
     // Testa o find
     nomes.find("Cicrano");
     nomes.find("Ze Ninguem");
 
-    std::cout << "--------------------" << std::endl;
+    cout << "--------------------" << endl;
 
     // Testa o pop
     nomes.pop(); // Remove Fulano
@@ -26,8 +25,8 @@ int main() {
     nomes.pop(); // Remove Beltrano
     nomes.pop(); // Tenta remover de uma pilha já vazia
 
-    std::cout << "--------------------" << std::endl;
-    std::cout << "Programa encerrado." << std::endl;
+    cout << "--------------------" << endl;
+    cout << "Programa encerrado." << endl;
 
     return 0;
 }
