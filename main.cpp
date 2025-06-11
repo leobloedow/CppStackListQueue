@@ -1,32 +1,37 @@
-#include "Pilha.h"
+#include "Fila.h"
+#include "Lista.h"
 #include <iostream>
 #include <string>
 
-using namespace std;
-
 int main() {
-    Pilha<string> nomes;
+    Fila<std::string> clientes;
 
-    nomes.push("Beltrano");
-    nomes.push("Cicrano");
-    nomes.push("Fulano");
+    std::cout << "--- Testando a Fila ---" << std::endl;
 
-    cout << "--------------------" << endl;
+    // Teste de inserção (push)
+    clientes.push("Ana");
+    clientes.push("Bruno");
+    clientes.push("Carla");
 
-    // Testa o find
-    nomes.find("Cicrano");
-    nomes.find("Ze Ninguem");
+    std::cout << "--------------------" << std::endl;
 
-    cout << "--------------------" << endl;
+    // Teste de front
 
-    // Testa o pop
-    nomes.pop(); // Remove Fulano
-    nomes.pop(); // Remove Cicrano
-    nomes.pop(); // Remove Beltrano
-    nomes.pop(); // Tenta remover de uma pilha já vazia
+    std::cout << "--------------------" << std::endl;
 
-    cout << "--------------------" << endl;
-    cout << "Programa encerrado." << endl;
+    // Teste de busca (find)
+
+    std::cout << "--------------------" << std::endl;
+
+    // Teste de remoção (pop)
+    clientes.pop(); // Remove Ana
+ 
+    clientes.pop(); // Remove Bruno
+    clientes.pop(); // Remove Carla
+    clientes.pop(); // Tenta remover de uma fila vazia
+
+    std::cout << "--------------------" << std::endl;
+    std::cout << "Programa Fila encerrado." << std::endl;
 
     return 0;
 }

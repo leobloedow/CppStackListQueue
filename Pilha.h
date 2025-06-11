@@ -8,7 +8,6 @@ class Pilha {
 private:
     Node<T>* base;
     Node<T>* topo;
-    int tamanho;
 
 public:
     Pilha();
@@ -25,7 +24,6 @@ template <class T>
 Pilha<T>::Pilha() {
     base = nullptr;
     topo = nullptr;
-    tamanho = 0;
 }
 
 template <class T>
@@ -39,7 +37,6 @@ void Pilha<T>::push(T data) {
         novo->anterior = topo;
         topo = novo;
     }
-    tamanho++;
     cout << "elemento '" << data << "' inserido no topo da pilha!" << endl;
 }
 
@@ -59,7 +56,6 @@ void Pilha<T>::pop() {
         topo->proximo = nullptr;
     }
     delete temp;
-    tamanho--;
 }
 
 template <class T>
